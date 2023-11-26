@@ -7,7 +7,7 @@
 \begin{sol}
     Sabemos\footnote{Subsección V.3.c\cite{cuerpos}.} que la resolvente del polinomio será $g\left( \mathrm{t} \right) = \mathrm{t}^3 - 2a \mathrm{t}^2 + \left( a^2 - 4b \right)\mathrm{t}$ que es claramente reducible en $K\left[\mathrm{t}\right]$. También sabemos\footnote{Ejemplos VII.2.13 (3.1)\cite{anillos}.} que $\Delta\left( f \right) = 16b\left( 4b - a^2 \right)^2$. Observando entonces la tabla de la Proposición V.3.3\cite{cuerpos}, tenemos que el grupo de Galois de $f$ sobre $K$, $G_K\left( f \right)$, será isomorfo a una de las siguientes opciones: $\mathbb{Z}_2 \times \mathbb{Z}_2,\ \matheuler{D}_4$ ó $\mathbb{Z}_4$.
 
-    Empecemos distinguiendo el caso en el que la raíz cuadrada (positiva) del discriminante pertenece a $K$. Esto es equivalente a que $\delta := \sqrt{16b\left( 4b - a^2 \right)^2} = 4 \sqrt{b} \left( 4b - a^2 \right) \in K$. Como el segundo término del producto lo cumple por definición, solo nos queda ver cuando se da para el primero. Trivialmente se dará si $\exists c \in K : b = c^2$. Si esto ocurre, observamos la tabla y vemos que $\boxed{G_K\left( f \right) \simeq \mathbb{Z}_2 \times \mathbb{Z}_2}$. En caso contrario, que es lo que asumiremos en lo sucesivo, tendremos que no existe tal $c$ o, dicho de otra manera, $b$ no es un cuadrado en $K$ y $G_K\left( f \right)$ será isomorfo a alguno de los otros dos grupos nombrados. Además, tendremos que $K\left( \delta \right) = K\left( \sqrt{b} \right)$. Veamos cuando se da cada caso.
+    Empecemos distinguiendo el caso en el que la raíz cuadrada (positiva) del discriminante pertenece a $K$. Esto es equivalente a que $\delta := \sqrt{16b\left( 4b - a^2 \right)^2} = 4 \sqrt{b} \left( 4b - a^2 \right) \in K$. Como el segundo término del producto lo cumple por definición, solo nos queda ver cuándo se da para el primero, que será si $\exists c \in K : b = c^2$. Si esto ocurre, observamos la tabla y vemos que $\boxed{G_K\left( f \right) \simeq \mathbb{Z}_2 \times \mathbb{Z}_2}$. En caso contrario, que es lo que asumiremos en lo sucesivo, tendremos que no existe tal $c$ o, dicho de otra manera, $b$ no es un cuadrado en $K$, es decir, $K\left( \delta \right) = K\left( \sqrt{b} \right)$. Además, $G_K\left( f \right)$ será isomorfo a alguno de los otros dos grupos nombrados. Veamos cuando se da cada caso.
 
     Estudiemos ahora la irreducibilidad de $f$ en $K\left( \delta \right)\left[ \mathrm{t} \right]$ según $a$ y $b$. Que $f$ sea reducible puede significar una de dos cosas:
     \begin{itemize}
@@ -16,7 +16,7 @@
     \end{itemize}
     Sin embargo, la primera posibilidad la podemos descartar debido a que, si la asumimos como cierta, al ser $f$ irreducible en $K\left[ \mathrm{t} \right]$, tendríamos la siguiente desigualdad:\footnote{Transitividad del grado. Proposición I.1.6\cite{cuerpos}.}
     \[
-    4 = \mathrm{deg}\left( f \right) = \mathrm{deg}\left( P_{K, \alpha} \right) = \left[ K\left( \alpha \right) : K \right] \le \left[ K\left( \delta \right) : K \right] = 2
+    4 = \mathrm{deg}\left( f \right) = \mathrm{deg}\left( P_{K, \alpha} \right) = \left[ K\left( \alpha \right) : K \right] \le \left[ K\left( \delta \right) : K \right] = \left[ K\left( \sqrt{b} \right) : K \right] = 2
     \]
     que es una contradicción.
 
@@ -24,14 +24,14 @@
     \[
     u := \sqrt{\frac{-a + \sqrt{a^2 - 4b}}{2}}\qquad v := \sqrt{\frac{-a - \sqrt{a^2 - 4b}}{2}}
     \]
-    y sus opuestos. Naturalmente, $u,v \in K_f$\footnote{$K_f$ denota el cuerpo de descomposición de $f$ sobre $K$.} lo que quiere decir, a su vez, que $\beta := \sqrt{a^2 - 4b} = 2u^2 + a \in K_f$. Por lo tanto, podemos factorizar $f$ como:
+    y sus opuestos. Naturalmente, $u,v \in K_f$,\footnote{$K_f$ denota el cuerpo de descomposición de $f$ sobre $K$.} lo que quiere decir, a su vez, que $\beta := \sqrt{a^2 - 4b} = 2u^2 + a \in K_f$. Por lo tanto, podemos factorizar $f$ como:
     \begin{align*}
         f\left( \mathrm{t} \right) &= \mathrm{t}^4 + a \mathrm{t}^2 + b\\
         &= \left( \mathrm{t}^2 + \frac{a}{2} \right)^2 - \frac{a^2 - 4b}{4}\\
         &= \left( \mathrm{t}^2 + \frac{a}{2} - \frac{\sqrt{a^2 - 4b}}{2} \right) \left( \mathrm{t}^2 + \frac{a}{2} + \frac{\sqrt{a^2 - 4b}}{2} \right)\\
         &= \left( t^2 + \frac{a}{2} - \frac{\beta}{2} \right)\left( \mathrm{t}^2 + \frac{a}{2} + \frac{\beta}{2} \right)
     \end{align*}
-    Ahora, si $\beta \in K\left( \sqrt{b} \right)$, entonces, $f$ es reducible en $K\left( \sqrt{b} \right)\left[ \mathrm{t} \right]$ y $\boxed{G_K\left( f \right) \simeq \mathbb{Z}_4}$.
+    Es decir, si $\beta \in K\left( \sqrt{b} \right)$, $f$ es reducible en $K\left( \sqrt{b} \right)\left[ \mathrm{t} \right]$ y $\boxed{G_K\left( f \right) \simeq \mathbb{Z}_4}$.
 
-    Si suponemos ahora que $\beta \not\in K\left( \sqrt{b} \right)$, tendremos que $K\left( \sqrt{b} \right) \mid K$ y $K\left( \sqrt{a^2 - 4b} \right) \mid K$ son dos subextensiones distintas de grado $2$ de $K_f \mid K$, pero como $\mathbb{Z}_4$ solo tiene un subgrupo de índice $2$, por la primera parte del Teorema Fundamental de la teoría de Galois,\footnote{Teorema IV.2.5\cite{cuerpos}.} solo puede haber una subextensión de grado $2$. Como solo teníamos dos alternativas, $\boxed{G_K\left( f \right) \simeq \matheuler{D}_4}$.
+    Si suponemos ahora que $\beta \not\in K\left( \sqrt{b} \right)$, tendremos que $K\left( \sqrt{b} \right) \mid K$ y $K\left( \beta \right) \mid K$ son dos subextensiones distintas de grado dos\footnote{Sabemos que $K\left( \beta \right) \mid K$ tiene grado $2$ porque $a^2 - 4b \in K$.} de $K_f \mid K$, pero como $\mathbb{Z}_4$ solo tiene un subgrupo de índice $2$, por la primera parte del Teorema Fundamental de la teoría de Galois,\footnote{Teorema IV.2.5\cite{cuerpos}.} solo puede haber una subextensión de grado $2$. Como solo teníamos dos alternativas para el grupo de Galois, $\boxed{G_K\left( f \right) \simeq \matheuler{D}_4}$.
 \end{sol}
